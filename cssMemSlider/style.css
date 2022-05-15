@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 .container {
     margin: 0 auto;
@@ -9,15 +10,15 @@
     width: 900px;
     background-color: black;
     border-radius: 20px;
+    overflow: hidden;
 }
 input {
     display: none;
 }
 .img-wrapper {
     display: flex;
+    gap: 50px;
     margin: 0 auto;
-    overflow: hidden;
-    border-radius: 20px;
 }
 .img-wrapper, .signature {
     transition: transform 1s ease-in-out;
@@ -28,7 +29,7 @@ input {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: 2s;
+    border-radius: 20px;
 }
 .img-1 {
     background-image: url(./assets/1.jpeg);
@@ -46,26 +47,92 @@ input {
     display: flex;
     margin-top: 50px;
 }
-.signature {
+.signature-wrap {
     overflow: hidden;
+}
+.signature {
     display: flex;
+    gap: 200px;
 }
 .text {
+    padding-left: 10px;
     min-width: 600px;
-    height: 50px;
-    font-size: 20px;
+    height: 60px;
+    font-size: 22px;
     color: #fff;
 }
 .nav {
+    padding-right: 10px;
     display: flex;
     justify-content: right;
-    gap: 10px;
+    gap: 5px;
     min-width: 200px;
 }
 .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.control {
     border-radius: 100%;
     width: 15px;
     height: 15px;
-    border: 2px solid #fff;
-    transition: all 0.5s ease-out;
+    border: 1px solid #ed9e1e;
+    transition: all 0.5s ease-in-out;
+}
+.control:hover {
+    border: none;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+#radio1:checked~.img-wrapper{
+    transform: translateX(0);
+}
+
+#radio2:checked~.img-wrapper {
+    transform: translateX(-850px);
+}
+
+#radio3:checked~.img-wrapper {
+    transform: translateX(-1700px);
+}
+
+#radio4:checked~.img-wrapper {
+    transform: translateX(-2550px);
+}
+
+#radio1:checked~.nav-wrapper .signature {
+    transform: translateX(0);
+}
+
+#radio2:checked~.nav-wrapper .signature {
+    transform: translateX(-800px);
+}
+
+#radio3:checked~.nav-wrapper .signature {
+    transform: translateX(-1600px);
+}
+
+#radio4:checked~.nav-wrapper .signature {
+    transform: translateX(-2400px);
+}
+#radio1:checked~.nav-wrapper .nav .btn-1 .control {
+    background-color: #ed9e1e;
+}
+
+#radio2:checked~.nav-wrapper .nav .btn-2 .control {
+    background-color: #ed9e1e;
+}
+
+#radio3:checked~.nav-wrapper .nav .btn-3 .control {
+    background-color: #ed9e1e;
+}
+
+#radio4:checked~.nav-wrapper .nav .btn-4 .control {
+    background-color: #ed9e1e;
 }
