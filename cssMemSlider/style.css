@@ -7,7 +7,7 @@
 .container {
     margin: 0 auto;
     padding: 30px 50px 30px 50px;
-    width: 900px;
+    width: 56.25rem;
     background-color: black;
     border-radius: 20px;
     overflow: hidden;
@@ -24,7 +24,7 @@ input {
     transition: transform 1s ease-in-out;
 }
 .img {
-    min-width: 800px;
+    min-width: 50rem;
     height: 550px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -56,9 +56,9 @@ input {
 }
 .text {
     padding-left: 10px;
-    min-width: 600px;
-    height: 60px;
-    font-size: 22px;
+    min-width: 37.5rem;
+    height: 100%;
+    font-size: 1.375rem;
     color: #fff;
 }
 .nav {
@@ -66,14 +66,14 @@ input {
     display: flex;
     justify-content: right;
     gap: 5px;
-    min-width: 200px;
+    min-width: 8rem;
 }
 .btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25px;
-    height: 25px;
+    width: 1.875rem;
+    height: 1.875rem;
 }
 .btn:hover {
     cursor: pointer;
@@ -83,12 +83,7 @@ input {
     width: 15px;
     height: 15px;
     border: 1px solid #ed9e1e;
-    transition: all 0.5s ease-in-out;
-}
-.control:hover {
-    border: none;
-    border: 1px solid #fff;
-    cursor: pointer;
+    transition: all 0.5s;
 }
 #radio1:checked~.img-wrapper{
     transform: translateX(0);
@@ -121,18 +116,94 @@ input {
 #radio4:checked~.nav-wrapper .signature {
     transform: translateX(-2400px);
 }
-#radio1:checked~.nav-wrapper .nav .btn-1 .control {
+#radio1:checked~.nav-wrapper .nav .btn-1 .control, #radio2:checked~.nav-wrapper .nav .btn-2 .control, #radio3:checked~.nav-wrapper .nav .btn-3 .control, #radio4:checked~.nav-wrapper .nav .btn-4 .control {
     background-color: #ed9e1e;
 }
 
-#radio2:checked~.nav-wrapper .nav .btn-2 .control {
-    background-color: #ed9e1e;
+#radio1:active~.nav-wrapper .nav .btn-1 .control, #radio2:active~.nav-wrapper .nav .btn-2 .control, #radio3:active~.nav-wrapper .nav .btn-3 .control, #radio4:active~.nav-wrapper .nav .btn-4 .control {
+    background-color: #fff;
 }
-
-#radio3:checked~.nav-wrapper .nav .btn-3 .control {
-    background-color: #ed9e1e;
+#radio1:hover~.nav-wrapper .nav .btn-1 .control, #radio2:hover~.nav-wrapper .nav .btn-2 .control, #radio3:hover~.nav-wrapper .nav .btn-3 .control, #radio4:hover~.nav-wrapper .nav .btn-4 .control {
+    border: none;
+    border: 1px solid #fff;
+    cursor: pointer;
 }
-
-#radio4:checked~.nav-wrapper .nav .btn-4 .control {
-    background-color: #ed9e1e;
+@media (max-width: 991px) {
+    .container {
+        width: calc(100% - 3.125rem);
+    }
+    .img {
+        min-width: 100%;
+    }
+    .signature {
+        gap: 8rem;
+    }
+    .text {
+        min-width: 100%;
+        font-size: 20px;
+        text-align: left;
+    }
+    #radio1:checked~.img-wrapper{
+        transform: translateX(0);
+    }
+    #radio2:checked~.img-wrapper {
+        transform: translateX(calc(-100% - 50px));
+    }
+    
+    #radio3:checked~.img-wrapper {
+        transform: translateX(calc(-200% - 100px));
+    }
+    
+    #radio4:checked~.img-wrapper {
+        transform: translateX(calc(-300% - 150px));
+    }
+    
+    #radio1:checked~.nav-wrapper .signature {
+        transform: translateX(0);
+    }
+    
+    #radio2:checked~.nav-wrapper .signature {
+        transform: translateX(calc(-100% - 8rem));
+    }
+    
+    #radio3:checked~.nav-wrapper .signature {
+        transform: translateX(calc(-200% - 16rem));
+    }
+    
+    #radio4:checked~.nav-wrapper .signature {
+        transform: translateX(calc(-300% - 24rem));
+    }
+}
+@media (max-width: 767px) {
+    .container {
+        padding: 10px;
+    }
+    .img {
+        height: 400px;
+    }
+    .text {
+        font-size: 1.12rem;
+    }
+}
+@media (max-width: 424px) {
+    .container {
+        width: calc(100% - 0.5rem);
+    }
+    .img {
+        height: 300px;
+    }
+    .nav-wrapper {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .signature-wrap {
+        order: 2;
+    }
+    .nav {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .text {
+        font-size: 1rem;
+    }
 }
