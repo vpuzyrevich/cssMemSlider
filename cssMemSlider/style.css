@@ -6,10 +6,11 @@
 }
 .container {
     margin: 0 auto;
-    padding: 30px 50px 30px 50px;
+    margin-top: 1.875rem;
+    padding: 1.875rem 3.125rem;
     width: 56.25rem;
     background-color: black;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     overflow: hidden;
 }
 input {
@@ -17,7 +18,7 @@ input {
 }
 .img-wrapper {
     display: flex;
-    gap: 50px;
+    gap: 3.125rem;
     margin: 0 auto;
 }
 .img-wrapper, .signature {
@@ -25,11 +26,11 @@ input {
 }
 .img {
     min-width: 50rem;
-    height: 550px;
+    height: 34.375rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 .img-1 {
     background-image: url(./assets/1.jpeg);
@@ -45,27 +46,27 @@ input {
 }
 .nav-wrapper {
     display: flex;
-    margin-top: 50px;
+    margin-top: 3.125rem;
 }
 .signature-wrap {
     overflow: hidden;
 }
 .signature {
     display: flex;
-    gap: 200px;
+    gap: 12.5rem;
 }
 .text {
-    padding-left: 10px;
+    padding-left: 0.625rem;
     min-width: 37.5rem;
     height: 100%;
     font-size: 1.375rem;
     color: #fff;
 }
 .nav {
-    padding-right: 10px;
+    padding-right: 0.625rem;
     display: flex;
     justify-content: right;
-    gap: 5px;
+    gap: 0.313rem;
     min-width: 8rem;
 }
 .btn {
@@ -80,9 +81,9 @@ input {
 }
 .control {
     border-radius: 100%;
-    width: 15px;
-    height: 15px;
-    border: 1px solid #ed9e1e;
+    width: 0.938rem;
+    height: 0.938rem;
+    border: 0.063rem solid #ed9e1e;
     transition: all 0.5s;
 }
 #radio1:checked~.img-wrapper{
@@ -90,15 +91,15 @@ input {
 }
 
 #radio2:checked~.img-wrapper {
-    transform: translateX(-850px);
+    transform: translateX(-53.125rem);
 }
 
 #radio3:checked~.img-wrapper {
-    transform: translateX(-1700px);
+    transform: translateX(-106.25rem);
 }
 
 #radio4:checked~.img-wrapper {
-    transform: translateX(-2550px);
+    transform: translateX(-159.375rem);
 }
 
 #radio1:checked~.nav-wrapper .signature {
@@ -106,15 +107,15 @@ input {
 }
 
 #radio2:checked~.nav-wrapper .signature {
-    transform: translateX(-800px);
+    transform: translateX(-50rem);
 }
 
 #radio3:checked~.nav-wrapper .signature {
-    transform: translateX(-1600px);
+    transform: translateX(-100rem);
 }
 
 #radio4:checked~.nav-wrapper .signature {
-    transform: translateX(-2400px);
+    transform: translateX(-150rem);
 }
 #radio1:checked~.nav-wrapper .nav .btn-1 .control, #radio2:checked~.nav-wrapper .nav .btn-2 .control, #radio3:checked~.nav-wrapper .nav .btn-3 .control, #radio4:checked~.nav-wrapper .nav .btn-4 .control {
     background-color: #ed9e1e;
@@ -125,10 +126,10 @@ input {
 }
 #radio1:hover~.nav-wrapper .nav .btn-1 .control, #radio2:hover~.nav-wrapper .nav .btn-2 .control, #radio3:hover~.nav-wrapper .nav .btn-3 .control, #radio4:hover~.nav-wrapper .nav .btn-4 .control {
     border: none;
-    border: 1px solid #fff;
+    border: 0.063rem solid #fff;
     cursor: pointer;
 }
-@media (max-width: 991px) {
+@media (max-width: 61.938rem) {
     .container {
         width: calc(100% - 3.125rem);
     }
@@ -140,22 +141,22 @@ input {
     }
     .text {
         min-width: 100%;
-        font-size: 20px;
+        font-size: 1.25rem;
         text-align: left;
     }
     #radio1:checked~.img-wrapper{
         transform: translateX(0);
     }
     #radio2:checked~.img-wrapper {
-        transform: translateX(calc(-100% - 50px));
+        transform: translateX(calc(-100% - 3.125rem));
     }
     
     #radio3:checked~.img-wrapper {
-        transform: translateX(calc(-200% - 100px));
+        transform: translateX(calc(-200% - 6.25rem));
     }
     
     #radio4:checked~.img-wrapper {
-        transform: translateX(calc(-300% - 150px));
+        transform: translateX(calc(-300% - 9.375rem));
     }
     
     #radio1:checked~.nav-wrapper .signature {
@@ -174,34 +175,34 @@ input {
         transform: translateX(calc(-300% - 24rem));
     }
 }
-@media (max-width: 767px) {
+@media (max-width: 47.938rem) {
     .container {
-        padding: 10px;
+        padding: 0.625rem;
     }
     .img {
-        height: 400px;
+        height: 25rem;
     }
     .text {
         font-size: 1.12rem;
     }
 }
-@media (max-width: 424px) {
+@media (max-width: 26.5rem) {
     .container {
         width: calc(100% - 0.5rem);
     }
     .img {
-        height: 300px;
+        height: 18.75rem;
     }
     .nav-wrapper {
         flex-direction: column;
-        margin-top: 20px;
+        margin-top: 1.25rem;
     }
     .signature-wrap {
         order: 2;
     }
     .nav {
         margin: 0 auto;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
     }
     .text {
         font-size: 1rem;
