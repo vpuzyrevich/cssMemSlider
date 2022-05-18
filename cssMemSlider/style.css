@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.container {
+    margin: 0 auto;
+    margin-top: 1.875rem;
+    padding: 1.875rem 3.125rem;
+    width: 56.25rem;
+    background-color: black;
+    border-radius: 1.25rem;
+    overflow: hidden;
+}
+input {
+    display: none;
+}
+.img-wrapper {
+    display: flex;
+    gap: 3.125rem;
+    margin: 0 auto;
+}
+.img-wrapper, .signature {
+    transition: transform 1s ease-in-out;
+}
+.img {
+    min-width: 50rem;
+    height: 34.375rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.25rem;
+}
+.img-1 {
+    background-image: url(./assets/1.jpeg);
+}
+.img-2 {
+    background-image: url(./assets/2.jpeg);
+}
+.img-3 {
+    background-image: url(./assets/3.jpeg);
+}
+.img-4 {
+    background-image: url(./assets/4.jpeg);
+}
+.nav-wrapper {
+    display: flex;
+    margin-top: 3.125rem;
+}
+.signature-wrap {
+    overflow: hidden;
+}
+.signature {
+    display: flex;
+    gap: 12.5rem;
+}
+.text {
+    padding-left: 0.625rem;
+    min-width: 37.5rem;
+    height: 100%;
+    font-size: 1.375rem;
+    color: #fff;
+}
+.nav {
+    padding-right: 0.625rem;
+    display: flex;
+    justify-content: right;
+    gap: 0.313rem;
+    min-width: 8rem;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.875rem;
+    height: 1.875rem;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.control {
+    border-radius: 100%;
+    width: 0.938rem;
+    height: 0.938rem;
+    border: 0.063rem solid #ed9e1e;
+    transition: all 0.5s;
+}
+#radio1:checked~.img-wrapper{
+    transform: translateX(0);
+}
+
+#radio2:checked~.img-wrapper {
+    transform: translateX(-53.125rem);
+}
+
+#radio3:checked~.img-wrapper {
+    transform: translateX(-106.25rem);
+}
+
+#radio4:checked~.img-wrapper {
+    transform: translateX(-159.375rem);
+}
+
+#radio1:checked~.nav-wrapper .signature {
+    transform: translateX(0);
+}
+
+#radio2:checked~.nav-wrapper .signature {
+    transform: translateX(-50rem);
+}
+
+#radio3:checked~.nav-wrapper .signature {
+    transform: translateX(-100rem);
+}
+
+#radio4:checked~.nav-wrapper .signature {
+    transform: translateX(-150rem);
+}
+#radio1:checked~.nav-wrapper .nav .btn-1 .control, #radio2:checked~.nav-wrapper .nav .btn-2 .control, #radio3:checked~.nav-wrapper .nav .btn-3 .control, #radio4:checked~.nav-wrapper .nav .btn-4 .control {
+    background-color: #ed9e1e;
+}
+
+#radio1:active~.nav-wrapper .nav .btn-1 .control, #radio2:active~.nav-wrapper .nav .btn-2 .control, #radio3:active~.nav-wrapper .nav .btn-3 .control, #radio4:active~.nav-wrapper .nav .btn-4 .control {
+    background-color: #fff;
+}
+#radio1:hover~.nav-wrapper .nav .btn-1 .control, #radio2:hover~.nav-wrapper .nav .btn-2 .control, #radio3:hover~.nav-wrapper .nav .btn-3 .control, #radio4:hover~.nav-wrapper .nav .btn-4 .control {
+    border: none;
+    border: 0.063rem solid #fff;
+    cursor: pointer;
+}
+@media (max-width: 61.938rem) {
+    .container {
+        width: calc(100% - 3.125rem);
+    }
+    .img {
+        min-width: 100%;
+    }
+    .signature {
+        gap: 8rem;
+    }
+    .text {
+        min-width: 100%;
+        font-size: 1.25rem;
+        text-align: left;
+    }
+    #radio1:checked~.img-wrapper{
+        transform: translateX(0);
+    }
+    #radio2:checked~.img-wrapper {
+        transform: translateX(calc(-100% - 3.125rem));
+    }
+    
+    #radio3:checked~.img-wrapper {
+        transform: translateX(calc(-200% - 6.25rem));
+    }
+    
+    #radio4:checked~.img-wrapper {
+        transform: translateX(calc(-300% - 9.375rem));
+    }
+    
+    #radio1:checked~.nav-wrapper .signature {
+        transform: translateX(0);
+    }
+    
+    #radio2:checked~.nav-wrapper .signature {
+        transform: translateX(calc(-100% - 8rem));
+    }
+    
+    #radio3:checked~.nav-wrapper .signature {
+        transform: translateX(calc(-200% - 16rem));
+    }
+    
+    #radio4:checked~.nav-wrapper .signature {
+        transform: translateX(calc(-300% - 24rem));
+    }
+}
+@media (max-width: 47.938rem) {
+    .container {
+        padding: 0.625rem;
+    }
+    .img {
+        height: 25rem;
+    }
+    .text {
+        font-size: 1.12rem;
+    }
+}
+@media (max-width: 26.5rem) {
+    .container {
+        width: calc(100% - 0.5rem);
+    }
+    .img {
+        height: 18.75rem;
+    }
+    .nav-wrapper {
+        flex-direction: column;
+        margin-top: 1.25rem;
+    }
+    .signature-wrap {
+        order: 2;
+    }
+    .nav {
+        margin: 0 auto;
+        margin-bottom: 1.25rem;
+    }
+    .text {
+        font-size: 1rem;
+    }
+}
